@@ -1,5 +1,13 @@
-<ul>
+<ul class="list-unstyled">
 {{#each}}
-  <li class="row">{{title}}</li>
+  <li class="row">
+    <div class="col-sm-3">
+      <a {{bind-attr href='url'}} targe='_blank'>Book Image</a>
+    </div>
+    <div class="col-sm-9">
+      {{title}}
+    </div>
+
+  </li>
 {{/each}}
 </ul>
