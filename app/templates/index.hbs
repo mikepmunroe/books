@@ -2,7 +2,9 @@
 {{#each}}
   <li class="row">
     <div class="col-sm-3">
-      <a {{bind-attr href='url'}} targe='_blank'>Book Image</a>
+      <a {{bind-attr href='url'}} targe='_blank'>
+        <img {{bind-attr src='image'}}/>
+      </a>
     </div>
     <div class="col-sm-9">
       {{title}}
