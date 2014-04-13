@@ -8,7 +8,7 @@
       <p class='text-center rating'><strong>{{rating}}</strong>/5</p>
     </div>
     <div class="col-sm-9">
-      {{title}}
+      {{#link-to 'book' this}}{{title}}{{/link-to}}
     </div>
 
   </li>
