@@ -1,11 +1,15 @@
 <div class="row">
   <div class="col-sm-3">
-    <a {{bind-attr href='url'}} targe='_blank'>
-      <img {{bind-attr src='image'}}/>
-    </a>
-    <p class='text-center rating'><strong>{{rating}}</strong>/5</p>
-  </div>
-  <div class="col-sm-9">
-    {{title}}
-  </div>
+      <a {{bind-attr href='url'}} targe='_blank'>
+        <img {{bind-attr src='image'}}/>
+      </a>
+      <p class='text-center rating'><strong>{{rating}}</strong>/5</p>
+    </div>
+    <div class="col-sm-9">
+      {{#link-to 'book' this}}{{title}}{{/link-to}}
+      <p class="text-muted"><em>Written by {{author}}</em></p>
+    </div>
+    <div>
+      {{review}}
+    </div>
 </div>

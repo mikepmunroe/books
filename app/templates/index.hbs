@@ -9,8 +9,11 @@
     </div>
     <div class="col-sm-9">
       {{#link-to 'book' this}}{{title}}{{/link-to}}
+      <p class="text-muted"><em>Written by {{author}}</em></p>
     </div>
-
+    <div>
+      {{review}}
+    </div>
   </li>
 {{/each}}
 </ul>
