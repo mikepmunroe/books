@@ -7,11 +7,6 @@
     {{render 'books' books}}
   </div>
   <div class="col-sm-4">
-    <h2>Genres</h2>
-    <ul class="list-unstyled">
-      {{#each genres}}
-        <li>{{this.name}}</li>
-      {{/each}}
-    </ul>
+    {{render 'genres' genres}}
   </div>
 </div>

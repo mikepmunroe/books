@@ -1,5 +1,3 @@
-var BooksController = Ember.ArrayController.extend({
-  sortProperties: ['title']
-});
+var IndexController = Ember.Controller.extend({});
 
-export default BooksController;
+export default IndexController;
