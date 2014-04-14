@@ -1,6 +1,17 @@
 <ol class="breadcrumb">
   <li class="active">Books</li>
 </ol>
-<ul class="list-unstyled">
-  {{render 'books' this}}
-</ul>
+
+<div class="row">
+  <div class="col-sm-8">
+    {{render 'books' books}}
+  </div>
+  <div class="col-sm-4">
+    <h2>Genres</h2>
+    <ul class="list-unstyled">
+      {{#each genres}}
+        <li>{{this.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
