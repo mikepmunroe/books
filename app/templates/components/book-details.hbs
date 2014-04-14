@@ -12,4 +12,4 @@
   {{book.review}}
 </div>
 
-<span class="label label-primary">{{book.genre.name}}</span>
+{{#link-to 'genre' book.genre class="label label-primary"}}{{book.genre.name}}{{/link-to}}

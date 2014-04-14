@@ -1,6 +1,6 @@
 <h2>Genres</h2>
 <ul class="list-unstyled">
   {{#each}}
-    <li>{{name}}</li>
+    <li>{{#link-to 'genre' this class="label label-primary"}}{{name}}{{/link-to}}</li>
   {{/each}}
 </ul>

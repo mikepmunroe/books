@@ -1,17 +1,17 @@
 var Genre = DS.Model.extend({
   name: DS.attr(),
-  books: DS.hasMany('book')
+  books: DS.hasMany('book', { async: true })
 });
 
 Genre.reopenClass({
   FIXTURES: [{
     id: 1,
-    name: 'Fiction',
-    books: [1, 2]
+    name: 'Fiction'
   },
   {
     id: 2,
-    name: 'Non Fiction'
+    name: 'Non Fiction',
+    books: [1, 2]
   },
   {
     id: 3,
