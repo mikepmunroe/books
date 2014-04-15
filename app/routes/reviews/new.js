@@ -1,5 +1,5 @@
 var ReviewsNewRoute = Ember.Route.extend({
-  model: function(params) {
+  model: function() {
     this.store.createRecord('book');
   }
 });
