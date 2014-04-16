@@ -4,12 +4,16 @@
   </a>
   <p class='text-center rating'><strong>{{book.rating}}</strong>/5</p>
 </div>
-<div class="col-sm-9">
-  {{#link-to 'book' book}}{{book.title}}{{/link-to}}
-  <p class="text-muted"><em>Written by {{book.author}}</em></p>
-</div>
-<div>
-  {{book.review}}
+<div class='col-sm-9'>
+  <h3>{{#link-to 'book' book}}{{book.title}}{{/link-to}}</h3>
+  <p class='text-muted'><em>Written by {{book.author}}</em></p>
+
+  <div>
+    <p>{{book.review}}</p>
+  </div>
+
+  <span>{{#link-to 'genre' book.genre class='label label-primary'}}{{book.genre.name}}{{/link-to}}</span>
 </div>
 
-{{#link-to 'genre' book.genre class="label label-primary"}}{{book.genre.name}}{{/link-to}}
+
+
