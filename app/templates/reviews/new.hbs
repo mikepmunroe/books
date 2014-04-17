@@ -35,7 +35,12 @@
         {{view Ember.Select content=ratings valueBinding='model.rating' class="form-control" id="book_rating"}}
       </div>
     </div>
-
+    <div class="form-group">
+      <label for="book_genre" class="col-sm-2 control-label">Genre</label>
+      <div class="col-sm-9">
+        {{view Ember.Select content=genres optionLabelPath="content.name" valueBinding="model.genre" class="form-control" id="book_genre"}}
+      </div>
+    </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default" {{action 'createReview'}}>Save Review</button>
