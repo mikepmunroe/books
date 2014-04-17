@@ -1,21 +1,39 @@
 <ol class="breadcrumb">
-      <li>{{#link-to 'index'}}Books{{/link-to}}</li>
-      <li class='active'>New</li>
-    </ol>
+  <li>{{#link-to 'index'}}Books{{/link-to}}</li>
+  <li class='active'>New</li>
+</ol>
 
-    <div class='row'>
-      <form class="form-horizontal" role="form">
-        <div class="form-group">
-          <label for="book_title" class="col-sm-2 control-label">Book Title</label>
-          <div class="col-sm-9">
-            {{input class="form-control" id="book_title" placeholder="Book Title" valueBinding="model.title"}}
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default" {{action 'createReview'}}>Save Review</button>
-          </div>
-        </div>
-      </form>
+<div class='row'>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="book_title" class="col-sm-2 control-label">Book Title</label>
+      <div class="col-sm-9">
+        {{input class="form-control" id="book_title" placeholder="Book Title" valueBinding="model.title"}}
+      </div>
     </div>
+    <div class="form-group">
+      <label for="book_author" class="col-sm-2 control-label">Author</label>
+      <div class="col-sm-9">
+        {{input class="form-control" id="book_author" placeholder="Author" valueBinding="model.author"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="book_amazon_id" class="col-sm-2 control-label">Amazon ID</label>
+      <div class="col-sm-9">
+        {{input class="form-control" id="book_amazon_id" placeholder="Amazon ID" valueBinding="model.amazon_id"}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="book_review" class="col-sm-2 control-label">Review</label>
+      <div class="col-sm-9">
+        {{textarea valueBinding="model.review" class="form-control" id="book_review"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" {{action 'createReview'}}>Save Review</button>
+      </div>
+    </div>
+  </form>
+</div>
